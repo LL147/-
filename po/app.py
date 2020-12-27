@@ -20,9 +20,6 @@ class App(BasePage):
             self.driver.launch_app()
             self.driver.implicitly_wait(5)
 
-    def teardown(self):
-        self.driver.quit()
-
-    def goto_main(self):
+   def goto_main(self):
         return MainPage(self.driver)
 
