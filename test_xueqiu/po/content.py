@@ -1,10 +1,8 @@
-from appium.webdriver.common.mobileby import MobileBy
-
-from test_xueqiu.po.base_page import BasePage
+from test_xueqiu.po.pre_page import PrePage
 
 
-class Content(BasePage):
+class Content(PrePage):
     def content(self):
-        self.find_send(MobileBy.XPATH, "//*[@resource-id='com.xueqiu.android:id/search_input_text']", "aaa")
+        self.basepage.load("../po/content.yaml")
 
         return True

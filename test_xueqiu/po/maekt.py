@@ -1,10 +1,8 @@
-from appium.webdriver.common.mobileby import MobileBy
-
-from test_xueqiu.po.base_page import BasePage
 from test_xueqiu.po.content import Content
+from test_xueqiu.po.pre_page import PrePage
 
 
-class Markt(BasePage):
+class Markt(PrePage):
     def search(self):
-        self.find_click(MobileBy.XPATH, "//*[@resource-id='com.xueqiu.android:id/action_search']")
-        return Content(self.driver)
+        self.basepage.load("../po/maekt.yaml")
+        return Content(self.basepage)
